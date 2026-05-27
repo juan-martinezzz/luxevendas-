@@ -1,0 +1,308 @@
+/* 
+   Vitrine Digital - Luxury Midnight & Champagne Gold Design System
+   Global CSS & High-End Aesthetic
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* --- SURREAL LUXURY SYSTEM TOKENS --- */
+:root {
+  /* Fontes Premium */
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* Tema Escuro Luxuoso (Padrão para visual Surpreendente) */
+  --bg-primary: #060609;
+  --bg-secondary: #0e0e14;
+  --bg-tertiary: #171722;
+  --text-primary: #F8F9FB;
+  --text-secondary: #9FA4B7;
+  --text-muted: #5D6376;
+  
+  /* Paleta Acetinada HSL */
+  --color-primary: hsl(38, 80%, 54%);       /* Champagne Gold */
+  --color-primary-light: rgba(228, 174, 82, 0.06);
+  --color-primary-dark: hsl(38, 80%, 42%);
+  --color-accent: hsl(265, 80%, 65%);       /* Violeta Místico */
+  --color-accent-light: rgba(158, 77, 239, 0.08);
+  --color-whatsapp: hsl(142, 75%, 45%);      /* Verde Esmeralda Luminous */
+  --color-whatsapp-hover: hsl(142, 75%, 38%);
+  
+  /* Bordas Metálicas */
+  --color-card-border: rgba(228, 174, 82, 0.15);
+  --color-border-glow: rgba(158, 77, 239, 0.25);
+  
+  /* Efeitos de Iluminação e Sombras */
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 15px 35px rgba(0, 0, 0, 0.6), 0 5px 15px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 30px 60px rgba(0, 0, 0, 0.8), 0 10px 25px rgba(158, 77, 239, 0.05);
+  --shadow-primary: 0 10px 25px -5px rgba(228, 174, 82, 0.3);
+  --shadow-whatsapp: 0 10px 25px -5px rgba(34, 187, 85, 0.3);
+  
+  /* Medidas Fluidas */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --transition-fast: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* Satin Glass */
+  --glass-bg: rgba(12, 12, 20, 0.75);
+  --glass-border: rgba(228, 174, 82, 0.1);
+}
+
+/* --- TEMA CLARO DE ALTÍSSIMA SOFISTICAÇÃO (OPCIONAL) --- */
+body.light-theme {
+  --bg-primary: #FAF9F6;  /* Warm Alabaster White */
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F3F1EC;
+  --text-primary: #1C1917;
+  --text-secondary: #6B6661;
+  --text-muted: #A8A29E;
+  
+  --color-primary: hsl(38, 80%, 45%);
+  --color-primary-light: rgba(200, 140, 50, 0.08);
+  --color-primary-dark: hsl(38, 80%, 35%);
+  --color-accent: hsl(265, 65%, 50%);
+  --color-accent-light: rgba(130, 60, 200, 0.06);
+  --color-card-border: rgba(200, 140, 50, 0.15);
+  
+  --shadow-sm: 0 4px 10px rgba(100, 95, 90, 0.04);
+  --shadow-md: 0 15px 35px rgba(100, 95, 90, 0.06), 0 5px 15px rgba(100, 95, 90, 0.04);
+  --shadow-lg: 0 35px 70px rgba(100, 95, 90, 0.12), 0 10px 25px rgba(130, 60, 200, 0.02);
+  
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(200, 140, 50, 0.1);
+}
+
+/* --- ESTILOS DE BASE --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  transition: background-color var(--transition-smooth), color var(--transition-smooth);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+/* Scrollbar Satin */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 20px;
+  border: 2px solid var(--bg-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* --- BOTÕES PREMIUM COM INTERAÇÃO MAGNÉTICA --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  border-radius: 50px; /* Botões arredondados modernos */
+  font-weight: 600;
+  font-size: 14.5px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+/* Glossy Sweep Shine Animation */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: skewX(-25deg);
+  pointer-events: none;
+}
+
+.btn:hover::after {
+  left: 150%;
+  transition: all 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, hsl(43, 90%, 65%) 100%);
+  color: #060609; /* Texto escuro no botão dourado passa muito luxo */
+  box-shadow: var(--shadow-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 30px rgba(228, 174, 82, 0.45);
+  background: linear-gradient(135deg, hsl(43, 90%, 65%) 0%, var(--color-primary) 100%);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1.5px solid var(--color-card-border);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(228, 174, 82, 0.15);
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, var(--color-whatsapp) 0%, hsl(142, 85%, 52%) 100%);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-whatsapp);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 30px rgba(34, 187, 85, 0.4);
+  background: linear-gradient(135deg, hsl(142, 85%, 52%) 0%, var(--color-whatsapp) 100%);
+}
+
+/* --- SEÇÃO HEADER --- */
+.section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 70px auto;
+}
+
+.section-tag {
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: inline-block;
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+body.light-theme .section-tag {
+  color: var(--color-primary);
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.section-title span {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.section-subtitle {
+  font-size: 16.5px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* --- UTILS --- */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 70px 0;
+  }
+  .section-title {
+    font-size: 34px;
+  }
+}
+
+/* --- FLOATING WHATSAPP BUTTON --- */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-whatsapp);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-whatsapp);
+  z-index: 9999;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1) translateY(-3px);
+  background-color: var(--color-whatsapp-hover);
+  box-shadow: 0 12px 30px rgba(34, 187, 85, 0.5);
+}
+
+.floating-whatsapp svg {
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 768px) {
+  .floating-whatsapp {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .floating-whatsapp svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
