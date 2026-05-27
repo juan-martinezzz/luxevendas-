@@ -292,7 +292,53 @@ body.light-theme .section-tag {
   height: 32px;
 }
 
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .section-title {
+    font-size: 38px;
+  }
+
+  .section-subtitle {
+    font-size: 15.5px;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    margin-bottom: 50px;
+  }
+
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .section-subtitle {
+    font-size: 15px;
+  }
+
+  .section-tag {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
   .floating-whatsapp {
     bottom: 20px;
     right: 20px;
@@ -303,6 +349,124 @@ body.light-theme .section-tag {
   .floating-whatsapp svg {
     width: 26px;
     height: 26px;
+  }
+
+  /* Better button sizing for touch */
+  .btn {
+    min-height: 44px;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  /* Improve form inputs for mobile */
+  input, textarea, select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .section-padding {
+    padding: 45px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    letter-spacing: -0.8px;
+    margin-bottom: 12px;
+  }
+
+  .section-subtitle {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+  .section-tag {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+  }
+
+  /* Mobile-first button improvements */
+  .btn {
+    min-height: 44px;
+    padding: 11px 18px;
+    font-size: 13px;
+    border-radius: 32px;
+    gap: 6px;
+  }
+
+  .btn:active {
+    transform: scale(0.98);
+  }
+
+  /* Improve form elements for touch */
+  input, textarea, select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    min-height: 44px;
+    padding: 12px 14px;
+  }
+
+  /* Ensure touch targets are at least 44x44px */
+  button, [role="button"], a[href] {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Improve scrolling performance */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Better text rendering on mobile */
+  body, .btn {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .floating-whatsapp {
+    bottom: 16px;
+    right: 12px;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .floating-whatsapp svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .floating-whatsapp:active {
+    transform: scale(0.95);
+  }
+
+  /* Reduce animations on mobile for better performance */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
