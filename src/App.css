@@ -1350,11 +1350,13 @@ footer {
 
   .nav-container {
     padding: 8px 0;
+    justify-content: space-between;
   }
 
   .logo {
     font-size: 20px;
     letter-spacing: -0.5px;
+    margin-right: auto;
   }
 
   .nav-links {
@@ -1373,19 +1375,21 @@ footer {
   }
 
   .header-actions {
-    gap: 14px;
+    gap: 18px;
     align-items: center;
+    margin-left: 16px;
   }
 
   .theme-toggle-btn {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     border-width: 1.5px;
+    flex-shrink: 0;
   }
 
   .theme-toggle-btn svg {
-    width: 19px;
-    height: 19px;
+    width: 18px;
+    height: 18px;
   }
 
   /* Mobile nav overlay */
@@ -1827,15 +1831,18 @@ footer {
   .logo {
     font-size: 18px;
     gap: 4px;
+    margin-right: auto;
   }
 
   .header-actions {
-    gap: 10px;
+    gap: 16px;
+    margin-left: 12px;
   }
 
   .theme-toggle-btn {
     width: 38px;
     height: 38px;
+    flex-shrink: 0;
   }
 
   .theme-toggle-btn svg {

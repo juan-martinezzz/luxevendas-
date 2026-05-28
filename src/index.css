@@ -342,13 +342,13 @@ body.light-theme .section-tag {
   .floating-whatsapp {
     bottom: 20px;
     right: 20px;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
   }
   
   .floating-whatsapp svg {
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
   }
 
   /* Better button sizing for touch */
@@ -447,13 +447,13 @@ body.light-theme .section-tag {
   .floating-whatsapp {
     bottom: 16px;
     right: 12px;
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
   }
   
   .floating-whatsapp svg {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
   }
 
   .floating-whatsapp:active {
