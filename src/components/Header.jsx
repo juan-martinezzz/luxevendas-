@@ -64,10 +64,9 @@ const Header = ({ isDarkMode, toggleTheme, onOpenCustomCta, phoneNumber = '55119
           {/* Quick Action Button */}
           <a 
             href={headerWhatsappUrl} 
-            className="btn btn-primary" 
+            className="btn btn-primary header-whatsapp-btn" 
             target="_blank" 
-            rel="noopener noreferrer" 
-            style={{ padding: '10px 20px', fontSize: '14px' }}
+            rel="noopener noreferrer"
           >
             Chamar no WhatsApp
           </a>
@@ -97,11 +96,19 @@ const Header = ({ isDarkMode, toggleTheme, onOpenCustomCta, phoneNumber = '55119
           <a href="#faq" onClick={closeMobileMenu}>Perguntas Frequentes</a>
           <a 
             href="#custom-cta" 
-            className="btn btn-secondary" 
-            style={{ width: '100%' }} 
+            className="btn btn-secondary mobile-menu-custom-btn" 
             onClick={closeMobileMenu}
           >
             Orçamento Personalizado
+          </a>
+          <a 
+            href={headerWhatsappUrl} 
+            className="btn btn-primary mobile-menu-whatsapp-btn" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            onClick={closeMobileMenu}
+          >
+            Chamar no WhatsApp
           </a>
         </div>
       )}

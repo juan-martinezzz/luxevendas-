@@ -7,72 +7,72 @@ const Catalog = ({ onOrder }) => {
   const templatesData = [
     {
       id: 1,
-      name: "Aura Joias",
+      name: "Site de Joias",
       categoryKey: "joias",
       category: "Joias & Semijoias",
       image: "/assets/site_joias.png",
       description: "Visual de luxo e extremo requinte. Destaca a sofisticação de anéis, colares e pedras preciosas com fundos limpos e tipografia fina.",
-      features: ["📱 Responsivo", "⚡ Carregamento Veloz", "⭐ Alta Conversão"],
+      features: ["Design Responsivo", "Carregamento Rápido", "Alta Conversão"],
       price: 450
     },
     {
       id: 2,
-      name: "Urban Thread",
+      name: "Site de Roupas",
       categoryKey: "roupas",
       category: "Roupas & Moda",
       image: "/assets/site_roupas.png",
       description: "Design contemporâneo, focado em imagens e estilo. Excelente para lojas de vestuário que desejam transmitir identidade forte e elegância.",
-      features: ["🎨 Cores Customizáveis", "📱 Mobile-First", "🛒 Prático e Limpo"],
+      features: ["Cores Customizáveis", "Mobile-First", "Navegação Fluida"],
       price: 450
     },
     {
       id: 3,
-      name: "Sprint Sneakers",
+      name: "Site de Tênis",
       categoryKey: "tenis",
       category: "Tênis & Calçados",
       image: "/assets/site_tenis.png",
       description: "Esportivo de alto impacto com contrastes modernos e paletas energéticas. Ideal para calçados esportivos e marcas focadas em performance.",
-      features: ["🔥 Design Fluido", "⚙️ Fácil Edição", "⚡ Otimizado SEO"],
+      features: ["Design Moderno", "Fácil Edição", "Otimizado para SEO"],
       price: 450
     },
     {
       id: 4,
-      name: "Luxor Acessórios",
+      name: "Site de Acessórios",
       categoryKey: "acessorios",
       category: "Acessórios",
       image: "/assets/site_acessorios.png",
       description: "Minimalista e clean, desenvolvido especialmente para ressaltar relógios, óculos de sol e carteiras de couro premium.",
-      features: ["💼 Visual Premium", "🔍 Foco em Detalhes", "✉️ WhatsApp Integrado"],
+      features: ["Layout Premium", "Foco em Detalhes", "WhatsApp Integrado"],
       price: 450
     },
     {
       id: 5,
-      name: "AutoFlow",
+      name: "Automação n8n",
       categoryKey: "automacao",
       category: "Automação Inteligente",
-      image: "/assets/site_automacao.svg",
-      description: "Plataforma robusta para automação de processos empresariais. Integração com APIs, webhooks e workflows inteligentes para otimizar operações.",
-      features: ["🤖 Automação Total", "🔗 Integrações API", "⚡ Processamento em Tempo Real"],
+      image: "/assets/autoflow.png",
+      description: "Plataforma profissional para automação de processos inteligentes. Desenvolvimento completo de WhatsApp Bot de atendimento e qualquer outro tipo de automação de fluxo de trabalho automatizado utilizando a poderosa ferramenta n8n.",
+      features: ["WhatsApp Bot n8n", "Fluxos de Trabalho", "Processamento Inteligente"],
       price: 1500
     },
     {
       id: 6,
-      name: "GestorPro",
+      name: "Sistema de Gestão Empresarial",
       categoryKey: "gestao",
       category: "Sistema de Gestão",
       image: "/assets/site_gestao.svg",
       description: "Sistema de gestão empresarial completo com controle de clientes, projetos, financeiro e relatórios avançados em tempo real.",
-      features: ["📊 Dashboard Completo", "💰 Gestão Financeira", "📈 Relatórios Inteligentes"],
+      features: ["Dashboard Integrado", "Gestão Financeira", "Relatórios Gerenciais"],
       price: 2500
     },
     {
       id: 7,
-      name: "StockControl",
+      name: "Controle de Estoque",
       categoryKey: "estoque",
       category: "Controle de Estoque",
       image: "/assets/site_estoque.svg",
       description: "Sistema de controle de estoque em tempo real com alertas automáticos, código de barras e gerenciamento de múltiplos armazéns.",
-      features: ["📦 Rastreamento Total", "🔔 Alertas Automáticos", "🏪 Multi-Armazém"],
+      features: ["Rastreamento Completo", "Alertas Automáticos", "Multi-Armazém"],
       price: 1800
     }
   ];

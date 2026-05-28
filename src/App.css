@@ -10,21 +10,28 @@
   width: 100%;
   height: 90px;
   z-index: 1000;
-  background: var(--glass-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1.5px solid var(--glass-border);
+  background: rgba(6, 6, 9, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(228, 174, 82, 0.15);
   transition: all var(--transition-smooth);
 }
 
 .header-glass.scrolled {
   height: 76px;
-  box-shadow: var(--shadow-sm);
-  background: rgba(12, 12, 18, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(228, 174, 82, 0.05);
+  background: rgba(12, 12, 18, 0.85);
+  border-bottom-color: rgba(228, 174, 82, 0.2);
+}
+
+body.light-theme .header-glass {
+  background: rgba(250, 249, 246, 0.7);
+  border-bottom-color: rgba(200, 140, 50, 0.15);
 }
 
 body.light-theme .header-glass.scrolled {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 30px rgba(100, 95, 90, 0.06);
 }
 
 .nav-container {
@@ -42,7 +49,22 @@ body.light-theme .header-glass.scrolled {
   color: var(--text-primary);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  transition: transform var(--transition-fast);
+}
+
+.logo:hover {
+  transform: translateY(-1px);
+}
+
+.logo img {
+  transition: all var(--transition-smooth);
+  box-shadow: 0 0 15px rgba(228, 174, 82, 0.1);
+}
+
+.logo:hover img {
+  transform: rotate(5deg) scale(1.05);
+  box-shadow: 0 0 20px rgba(228, 174, 82, 0.3);
 }
 
 .logo span {
@@ -69,15 +91,16 @@ body.light-theme .header-glass.scrolled {
   letter-spacing: 0.2px;
 }
 
+/* Center expanding high-end hover line */
 .nav-links a::after {
   content: '';
   position: absolute;
   bottom: -4px;
-  left: 0;
+  left: 50%;
   width: 0;
-  height: 1.5px;
+  height: 2px;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-  transition: width var(--transition-fast);
+  transition: width var(--transition-fast) var(--transition-smooth), left var(--transition-fast) var(--transition-smooth);
 }
 
 .nav-links a:hover {
@@ -86,12 +109,20 @@ body.light-theme .header-glass.scrolled {
 
 .nav-links a:hover::after {
   width: 100%;
+  left: 0;
 }
 
 .header-actions {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.header-whatsapp-btn {
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
 }
 
 .theme-toggle-btn {
@@ -112,6 +143,7 @@ body.light-theme .header-glass.scrolled {
   border-color: var(--color-primary);
   background: var(--bg-secondary);
   transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(228, 174, 82, 0.2);
 }
 
 .theme-toggle-btn svg {
@@ -128,36 +160,60 @@ body.light-theme .header-glass.scrolled {
   border: none;
   color: var(--text-primary);
   cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+}
+
+.mobile-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 @media (max-width: 900px) {
   .nav-links {
-    display: none;
+    display: none !important;
   }
   .mobile-menu-btn {
-    display: block;
+    display: block !important;
+  }
+  .header-whatsapp-btn {
+    display: none !important;
   }
 }
 
-/* Mobile Menu overlay styling */
+/* Mobile Menu overlay styling - Bulletproof relative alignment */
 .mobile-nav-overlay {
-  position: fixed;
-  top: 90px;
+  position: absolute !important;
+  top: 100% !important;
   left: 0;
   width: 100%;
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--color-card-border);
+  background: rgba(12, 12, 20, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1.5px solid var(--color-card-border);
   padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   z-index: 999;
-  box-shadow: var(--shadow-lg);
-  animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(228, 174, 82, 0.05);
+  animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+body.light-theme .mobile-nav-overlay {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 20px 40px rgba(100, 95, 90, 0.08);
+}
+
+.mobile-menu-custom-btn,
+.mobile-menu-whatsapp-btn {
+  width: 100% !important;
+  margin-top: 4px;
+  text-align: center;
 }
 
 @keyframes slideDown {
-  from { transform: translateY(-10px); opacity: 0; }
+  from { transform: translateY(-15px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
 
