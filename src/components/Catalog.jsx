@@ -50,7 +50,7 @@ const Catalog = ({ onOrder }) => {
       name: "AutoFlow",
       categoryKey: "automacao",
       category: "Automação Inteligente",
-      image: "/assets/site_automacao.png",
+      image: "/assets/site_automacao.svg",
       description: "Plataforma robusta para automação de processos empresariais. Integração com APIs, webhooks e workflows inteligentes para otimizar operações.",
       features: ["🤖 Automação Total", "🔗 Integrações API", "⚡ Processamento em Tempo Real"],
       price: 1500
@@ -60,7 +60,7 @@ const Catalog = ({ onOrder }) => {
       name: "GestorPro",
       categoryKey: "gestao",
       category: "Sistema de Gestão",
-      image: "/assets/site_gestao.png",
+      image: "/assets/site_gestao.svg",
       description: "Sistema de gestão empresarial completo com controle de clientes, projetos, financeiro e relatórios avançados em tempo real.",
       features: ["📊 Dashboard Completo", "💰 Gestão Financeira", "📈 Relatórios Inteligentes"],
       price: 2500
@@ -70,7 +70,7 @@ const Catalog = ({ onOrder }) => {
       name: "StockControl",
       categoryKey: "estoque",
       category: "Controle de Estoque",
-      image: "/assets/site_estoque.png",
+      image: "/assets/site_estoque.svg",
       description: "Sistema de controle de estoque em tempo real com alertas automáticos, código de barras e gerenciamento de múltiplos armazéns.",
       features: ["📦 Rastreamento Total", "🔔 Alertas Automáticos", "🏪 Multi-Armazém"],
       price: 1800

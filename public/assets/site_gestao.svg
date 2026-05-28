@@ -1,0 +1,87 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060609;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0e0e14;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e4ae52;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5c96b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9e4def;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b76bed;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+  
+  <!-- Radial glow -->
+  <circle cx="400" cy="300" r="300" fill="#9e4def" opacity="0.08"/>
+  <circle cx="400" cy="300" r="200" fill="#e4ae52" opacity="0.05"/>
+
+  <!-- Title area -->
+  <text x="400" y="60" font-family="Plus Jakarta Sans, sans-serif" font-size="48" font-weight="800" fill="#F8F9FB" text-anchor="middle" letter-spacing="-1">
+    GestorPro
+  </text>
+  <text x="400" y="100" font-family="Plus Jakarta Sans, sans-serif" font-size="18" fill="#9FA4B7" text-anchor="middle" font-weight="500">
+    Sistema de Gestão Empresarial
+  </text>
+
+  <!-- Dashboard Card -->
+  <g transform="translate(100, 130)">
+    <rect x="0" y="0" width="600" height="380" rx="16" fill="#0e0e14" stroke="#e4ae52" stroke-width="2" opacity="0.8"/>
+    
+    <!-- Dashboard Header -->
+    <rect x="0" y="0" width="600" height="50" rx="16" fill="#171722" stroke="none"/>
+    <text x="30" y="32" font-family="Plus Jakarta Sans, sans-serif" font-size="16" fill="#e4ae52" font-weight="700">Dashboard</text>
+    
+    <!-- Chart 1 - Line Chart -->
+    <g transform="translate(30, 80)">
+      <text x="0" y="-15" font-family="Plus Jakarta Sans, sans-serif" font-size="12" fill="#9FA4B7" font-weight="600">Vendas (últimos 7 dias)</text>
+      <line x1="0" y1="80" x2="160" y2="80" stroke="#5D6376" stroke-width="1"/>
+      <polyline points="0,60 40,40 80,50 120,20 160,35" stroke="#e4ae52" stroke-width="2" fill="none"/>
+      <circle cx="0" cy="60" r="3" fill="#e4ae52"/>
+      <circle cx="40" cy="40" r="3" fill="#e4ae52"/>
+      <circle cx="80" cy="50" r="3" fill="#e4ae52"/>
+      <circle cx="120" cy="20" r="3" fill="#e4ae52"/>
+      <circle cx="160" cy="35" r="3" fill="#e4ae52"/>
+    </g>
+
+    <!-- Chart 2 - Bar Chart -->
+    <g transform="translate(250, 80)">
+      <text x="40" y="-15" font-family="Plus Jakarta Sans, sans-serif" font-size="12" fill="#9FA4B7" font-weight="600">Receita por Categoria</text>
+      <rect x="10" y="50" width="20" height="30" fill="#9e4def" opacity="0.7"/>
+      <rect x="40" y="40" width="20" height="40" fill="#e4ae52" opacity="0.8"/>
+      <rect x="70" y="35" width="20" height="45" fill="#9e4def" opacity="0.7"/>
+      <rect x="100" y="45" width="20" height="35" fill="#e4ae52" opacity="0.8"/>
+      <line x1="0" y1="80" x2="130" y2="80" stroke="#5D6376" stroke-width="1"/>
+    </g>
+
+    <!-- Metrics Row -->
+    <g transform="translate(30, 200)">
+      <!-- Metric 1 -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="140" height="100" rx="8" fill="#171722" stroke="#e4ae52" stroke-width="1" opacity="0.6"/>
+        <text x="70" y="25" font-family="Plus Jakarta Sans, sans-serif" font-size="11" fill="#9FA4B7" text-anchor="middle" font-weight="500">Clientes</text>
+        <text x="70" y="60" font-family="Plus Jakarta Sans, sans-serif" font-size="28" fill="#e4ae52" text-anchor="middle" font-weight="700">1.254</text>
+      </g>
+
+      <!-- Metric 2 -->
+      <g transform="translate(155, 0)">
+        <rect x="0" y="0" width="140" height="100" rx="8" fill="#171722" stroke="#9e4def" stroke-width="1" opacity="0.6"/>
+        <text x="70" y="25" font-family="Plus Jakarta Sans, sans-serif" font-size="11" fill="#9FA4B7" text-anchor="middle" font-weight="500">Projetos</text>
+        <text x="70" y="60" font-family="Plus Jakarta Sans, sans-serif" font-size="28" fill="#9e4def" text-anchor="middle" font-weight="700">48</text>
+      </g>
+
+      <!-- Metric 3 -->
+      <g transform="translate(310, 0)">
+        <rect x="0" y="0" width="140" height="100" rx="8" fill="#171722" stroke="#e4ae52" stroke-width="1" opacity="0.6"/>
+        <text x="70" y="25" font-family="Plus Jakarta Sans, sans-serif" font-size="11" fill="#9FA4B7" text-anchor="middle" font-weight="500">Faturamento</text>
+        <text x="70" y="60" font-family="Plus Jakarta Sans, sans-serif" font-size="22" fill="#e4ae52" text-anchor="middle" font-weight="700">R$ 85K</text>
+      </g>
+    </g>
+  </g>
+
+</svg>

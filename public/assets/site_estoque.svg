@@ -1,0 +1,120 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060609;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0e0e14;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e4ae52;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5c96b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9e4def;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b76bed;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+  
+  <!-- Radial glow -->
+  <circle cx="400" cy="300" r="300" fill="#9e4def" opacity="0.08"/>
+  <circle cx="400" cy="300" r="200" fill="#e4ae52" opacity="0.05"/>
+
+  <!-- Title area -->
+  <text x="400" y="60" font-family="Plus Jakarta Sans, sans-serif" font-size="48" font-weight="800" fill="#F8F9FB" text-anchor="middle" letter-spacing="-1">
+    StockControl
+  </text>
+  <text x="400" y="100" font-family="Plus Jakarta Sans, sans-serif" font-size="18" fill="#9FA4B7" text-anchor="middle" font-weight="500">
+    Controle de Estoque
+  </text>
+
+  <!-- Warehouse visualization -->
+  <!-- Shelf Level 1 -->
+  <g transform="translate(80, 150)">
+    <!-- Shelf structure -->
+    <rect x="0" y="0" width="640" height="100" rx="8" fill="none" stroke="#5D6376" stroke-width="1" opacity="0.4"/>
+    
+    <!-- Boxes on shelf -->
+    <!-- Box 1 -->
+    <g transform="translate(30, 15)">
+      <rect x="0" y="0" width="70" height="65" rx="4" fill="#171722" stroke="#e4ae52" stroke-width="1.5"/>
+      <text x="35" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="32" fill="#e4ae52" text-anchor="middle" font-weight="700">📦</text>
+      <text x="35" y="68" font-family="Plus Jakarta Sans, sans-serif" font-size="9" fill="#9FA4B7" text-anchor="middle" font-weight="600">SKU-001</text>
+    </g>
+
+    <!-- Box 2 -->
+    <g transform="translate(130, 15)">
+      <rect x="0" y="0" width="70" height="65" rx="4" fill="#171722" stroke="#9e4def" stroke-width="1.5"/>
+      <text x="35" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="32" fill="#9e4def" text-anchor="middle" font-weight="700">📦</text>
+      <text x="35" y="68" font-family="Plus Jakarta Sans, sans-serif" font-size="9" fill="#9FA4B7" text-anchor="middle" font-weight="600">SKU-002</text>
+    </g>
+
+    <!-- Box 3 -->
+    <g transform="translate(230, 15)">
+      <rect x="0" y="0" width="70" height="65" rx="4" fill="#171722" stroke="#e4ae52" stroke-width="1.5"/>
+      <text x="35" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="32" fill="#e4ae52" text-anchor="middle" font-weight="700">📦</text>
+      <text x="35" y="68" font-family="Plus Jakarta Sans, sans-serif" font-size="9" fill="#9FA4B7" text-anchor="middle" font-weight="600">SKU-003</text>
+    </g>
+
+    <!-- Box 4 -->
+    <g transform="translate(330, 15)">
+      <rect x="0" y="0" width="70" height="65" rx="4" fill="#171722" stroke="#9e4def" stroke-width="1.5"/>
+      <text x="35" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="32" fill="#9e4def" text-anchor="middle" font-weight="700">📦</text>
+      <text x="35" y="68" font-family="Plus Jakarta Sans, sans-serif" font-size="9" fill="#9FA4B7" text-anchor="middle" font-weight="600">SKU-004</text>
+    </g>
+
+    <!-- Low stock warning -->
+    <g transform="translate(530, 15)">
+      <rect x="0" y="0" width="70" height="65" rx="4" fill="#171722" stroke="#ff6b6b" stroke-width="2"/>
+      <text x="35" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="32" fill="#ff6b6b" text-anchor="middle" font-weight="700">⚠</text>
+      <text x="35" y="68" font-family="Plus Jakarta Sans, sans-serif" font-size="9" fill="#ff6b6b" text-anchor="middle" font-weight="600">Baixo</text>
+    </g>
+  </g>
+
+  <!-- Stats Row -->
+  <g transform="translate(80, 290)">
+    <!-- Total Items -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="140" height="90" rx="8" fill="#0e0e14" stroke="#e4ae52" stroke-width="1.5" opacity="0.7"/>
+      <text x="70" y="25" font-family="Plus Jakarta Sans, sans-serif" font-size="12" fill="#9FA4B7" text-anchor="middle" font-weight="600">Total de Itens</text>
+      <text x="70" y="58" font-family="Plus Jakarta Sans, sans-serif" font-size="26" fill="#e4ae52" text-anchor="middle" font-weight="700">1.847</text>
+    </g>
+
+    <!-- Categories -->
+    <g transform="translate(165, 0)">
+      <rect x="0" y="0" width="140" height="90" rx="8" fill="#0e0e14" stroke="#9e4def" stroke-width="1.5" opacity="0.7"/>
+      <text x="70" y="25" font-family="Plus Jakarta Sans, sans-serif" font-size="12" fill="#9FA4B7" text-anchor="middle" font-weight="600">Categorias</text>
+      <text x="70" y="58" font-family="Plus Jakarta Sans, sans-serif" font-size="26" fill="#9e4def" text-anchor="middle" font-weight="700">24</text>
+    </g>
+
+    <!-- Warehouses -->
+    <g transform="translate(330, 0)">
+      <rect x="0" y="0" width="140" height="90" rx="8" fill="#0e0e14" stroke="#e4ae52" stroke-width="1.5" opacity="0.7"/>
+      <text x="70" y="25" font-family="Plus Jakarta Sans, sans-serif" font-size="12" fill="#9FA4B7" text-anchor="middle" font-weight="600">Armazéns</text>
+      <text x="70" y="58" font-family="Plus Jakarta Sans, sans-serif" font-size="26" fill="#e4ae52" text-anchor="middle" font-weight="700">3</text>
+    </g>
+
+    <!-- Low Stock Alert -->
+    <g transform="translate(495, 0)">
+      <rect x="0" y="0" width="140" height="90" rx="8" fill="#0e0e14" stroke="#ff6b6b" stroke-width="1.5" opacity="0.7"/>
+      <text x="70" y="25" font-family="Plus Jakarta Sans, sans-serif" font-size="12" fill="#9FA4B7" text-anchor="middle" font-weight="600">Alerta Baixo</text>
+      <text x="70" y="58" font-family="Plus Jakarta Sans, sans-serif" font-size="26" fill="#ff6b6b" text-anchor="middle" font-weight="700">5</text>
+    </g>
+  </g>
+
+  <!-- Features at bottom -->
+  <g transform="translate(100, 450)">
+    <text x="0" y="0" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#e4ae52" font-weight="700">✓ Rastreamento em Tempo Real</text>
+    <text x="0" y="35" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#9e4def" font-weight="700">✓ Alertas Automáticos de Baixo Estoque</text>
+    <text x="0" y="70" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#e4ae52" font-weight="700">✓ Múltiplos Armazéns e Locais</text>
+  </g>
+
+</svg>

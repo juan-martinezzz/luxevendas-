@@ -1,0 +1,83 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060609;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0e0e14;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e4ae52;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5c96b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9e4def;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b76bed;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+  
+  <!-- Radial glow -->
+  <circle cx="400" cy="300" r="300" fill="#9e4def" opacity="0.08"/>
+  <circle cx="400" cy="300" r="200" fill="#e4ae52" opacity="0.05"/>
+
+  <!-- Title area -->
+  <text x="400" y="60" font-family="Plus Jakarta Sans, sans-serif" font-size="48" font-weight="800" fill="#F8F9FB" text-anchor="middle" letter-spacing="-1">
+    AutoFlow
+  </text>
+  <text x="400" y="100" font-family="Plus Jakarta Sans, sans-serif" font-size="18" fill="#9FA4B7" text-anchor="middle" font-weight="500">
+    Automação Inteligente
+  </text>
+
+  <!-- Workflow nodes -->
+  <!-- Node 1 -->
+  <g transform="translate(120, 200)">
+    <circle cx="0" cy="0" r="35" fill="#e4ae52" opacity="0.15" stroke="#e4ae52" stroke-width="2"/>
+    <circle cx="0" cy="0" r="28" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+    <text x="0" y="8" font-family="Plus Jakarta Sans, sans-serif" font-size="24" fill="#e4ae52" text-anchor="middle" font-weight="700">▶</text>
+  </g>
+
+  <!-- Node 2 -->
+  <g transform="translate(400, 150)">
+    <circle cx="0" cy="0" r="40" fill="#9e4def" opacity="0.15" stroke="#9e4def" stroke-width="2"/>
+    <circle cx="0" cy="0" r="32" fill="none" stroke="url(#purpleGradient)" stroke-width="2"/>
+    <text x="0" y="10" font-family="Plus Jakarta Sans, sans-serif" font-size="28" fill="#9e4def" text-anchor="middle" font-weight="700">⚙</text>
+  </g>
+
+  <!-- Node 3 -->
+  <g transform="translate(680, 200)">
+    <circle cx="0" cy="0" r="35" fill="#e4ae52" opacity="0.15" stroke="#e4ae52" stroke-width="2"/>
+    <circle cx="0" cy="0" r="28" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+    <text x="0" y="8" font-family="Plus Jakarta Sans, sans-serif" font-size="24" fill="#e4ae52" text-anchor="middle" font-weight="700">✓</text>
+  </g>
+
+  <!-- Connectors -->
+  <path d="M 155 200 Q 275 170 365 165" stroke="#e4ae52" stroke-width="2" fill="none" opacity="0.6" stroke-dasharray="5,5"/>
+  <path d="M 435 170 Q 555 190 645 200" stroke="#9e4def" stroke-width="2" fill="none" opacity="0.6" stroke-dasharray="5,5"/>
+
+  <!-- Lower elements -->
+  <!-- Box 1 -->
+  <g transform="translate(150, 380)">
+    <rect x="0" y="0" width="120" height="140" rx="12" fill="#0e0e14" stroke="#e4ae52" stroke-width="1.5" opacity="0.7"/>
+    <text x="60" y="30" font-family="Plus Jakarta Sans, sans-serif" font-size="32" fill="#e4ae52" text-anchor="middle" font-weight="700">📊</text>
+    <text x="60" y="75" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#9FA4B7" text-anchor="middle" font-weight="600">Processos</text>
+    <text x="60" y="95" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#9FA4B7" text-anchor="middle" font-weight="600">Automatizados</text>
+  </g>
+
+  <!-- Box 2 -->
+  <g transform="translate(340, 380)">
+    <rect x="0" y="0" width="120" height="140" rx="12" fill="#0e0e14" stroke="#9e4def" stroke-width="1.5" opacity="0.7"/>
+    <text x="60" y="30" font-family="Plus Jakarta Sans, sans-serif" font-size="32" fill="#9e4def" text-anchor="middle" font-weight="700">🔗</text>
+    <text x="60" y="75" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#9FA4B7" text-anchor="middle" font-weight="600">APIs &</text>
+    <text x="60" y="95" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#9FA4B7" text-anchor="middle" font-weight="600">Webhooks</text>
+  </g>
+
+  <!-- Box 3 -->
+  <g transform="translate(530, 380)">
+    <rect x="0" y="0" width="120" height="140" rx="12" fill="#0e0e14" stroke="#e4ae52" stroke-width="1.5" opacity="0.7"/>
+    <text x="60" y="30" font-family="Plus Jakarta Sans, sans-serif" font-size="32" fill="#e4ae52" text-anchor="middle" font-weight="700">⚡</text>
+    <text x="60" y="75" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#9FA4B7" text-anchor="middle" font-weight="600">Tempo Real</text>
+    <text x="60" y="95" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#9FA4B7" text-anchor="middle" font-weight="600">Instantâneo</text>
+  </g>
+
+</svg>

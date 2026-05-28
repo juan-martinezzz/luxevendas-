@@ -17,9 +17,8 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedTemplate, setSelectedTemplate] = useState(null);
 
-  const WHATSAPP_NUMBER = '5511925431961'; // Centralized contact number
+  const WHATSAPP_NUMBER = '5511925431961'; 
 
-  // Initialize theme from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
@@ -36,7 +35,7 @@ function App() {
     setIsDarkMode(nextDarkState);
     if (nextDarkState) {
       document.body.classList.remove('light-theme');
-      localStorage.setItem('theme', 'dark');
+      localStorage.setItem('theme', 'dark ');
     } else {
       document.body.classList.add('light-theme');
       localStorage.setItem('theme', 'light');
