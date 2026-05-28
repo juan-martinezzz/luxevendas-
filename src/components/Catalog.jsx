@@ -44,6 +44,36 @@ const Catalog = ({ onOrder }) => {
       description: "Minimalista e clean, desenvolvido especialmente para ressaltar relógios, óculos de sol e carteiras de couro premium.",
       features: ["💼 Visual Premium", "🔍 Foco em Detalhes", "✉️ WhatsApp Integrado"],
       price: 450
+    },
+    {
+      id: 5,
+      name: "AutoFlow",
+      categoryKey: "automacao",
+      category: "Automação Inteligente",
+      image: "/assets/site_automacao.png",
+      description: "Plataforma robusta para automação de processos empresariais. Integração com APIs, webhooks e workflows inteligentes para otimizar operações.",
+      features: ["🤖 Automação Total", "🔗 Integrações API", "⚡ Processamento em Tempo Real"],
+      price: 1500
+    },
+    {
+      id: 6,
+      name: "GestorPro",
+      categoryKey: "gestao",
+      category: "Sistema de Gestão",
+      image: "/assets/site_gestao.png",
+      description: "Sistema de gestão empresarial completo com controle de clientes, projetos, financeiro e relatórios avançados em tempo real.",
+      features: ["📊 Dashboard Completo", "💰 Gestão Financeira", "📈 Relatórios Inteligentes"],
+      price: 2500
+    },
+    {
+      id: 7,
+      name: "StockControl",
+      categoryKey: "estoque",
+      category: "Controle de Estoque",
+      image: "/assets/site_estoque.png",
+      description: "Sistema de controle de estoque em tempo real com alertas automáticos, código de barras e gerenciamento de múltiplos armazéns.",
+      features: ["📦 Rastreamento Total", "🔔 Alertas Automáticos", "🏪 Multi-Armazém"],
+      price: 1800
     }
   ];
 
@@ -52,7 +82,10 @@ const Catalog = ({ onOrder }) => {
     { label: "Joias & Semijoias", value: "joias" },
     { label: "Roupas & Moda", value: "roupas" },
     { label: "Tênis & Calçados", value: "tenis" },
-    { label: "Acessórios", value: "acessorios" }
+    { label: "Acessórios", value: "acessorios" },
+    { label: "Automação", value: "automacao" },
+    { label: "Sistema de Gestão", value: "gestao" },
+    { label: "Controle de Estoque", value: "estoque" }
   ];
 
   const filteredTemplates = activeFilter === 'all' 
@@ -65,9 +98,9 @@ const Catalog = ({ onOrder }) => {
         
         <div className="section-header animate-fade-in">
           <span className="section-tag">Catálogo Exclusivo</span>
-          <h2 className="section-title">Encontre o design ideal para o seu negócio</h2>
+          <h2 className="section-title">Soluções Digitais para Seu Negócio</h2>
           <p className="section-subtitle">
-            Sites velozes, responsivos e com visualização limpa e focada. Clique abaixo para filtrar e garantir o seu modelo profissional.
+            Sites profissionais, sistemas de gestão e automação inteligente. Clique abaixo para filtrar entre templates e-commerce, soluções empresariais e sistemas de controle.
           </p>
         </div>
 
